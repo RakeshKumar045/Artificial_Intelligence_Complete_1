@@ -1,0 +1,6 @@
+.ipynb_checkpoints/*
+.DS_Store
+*checkpoints
+data/train/*.jpg
+data/test/*.jpg
+scripts/__pycache__/*
