@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+    <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css">
+    <title>Dashboard</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark title sticky-top">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Dashboard - Gestão de Performance</a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        </ul>
+    </div>
+</nav>
+<div class="m-5">
+    <div class="card text-center main-card">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active link-black" href="#">Geral</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-black" href="#">Finanças</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-black" href="#">Operações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-black" href="#">Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-black" href="#">RH</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body bg-dashboard">
+
+            <!-- Botão para gerar dados novos -->
+            <!-- {# 1ª coluna #} -->
+
+            <div class="row card-deck">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header title text-white">Vendas vs. target</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header title text-white">Custos Diretos vs. target</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-max-height">
+                        <div class="card-header title text-white">Eficiência Operacional vs. target</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- {# 2ª coluna #} -->
+
+            <div class="row card-deck mt-5">
+                <div class="col-md-9">
+                    <div class="card card-max-height">
+                        <div class="card-header title text-white">Resultados Financeiros</div>
+                        <div class="card-body" style="padding: 10px;">
+                            {{bokeh_script|safe}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header title text-white">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
