@@ -11,6 +11,7 @@ def home():
     bokeh_script = server_session(None, url="http://localhost:5006/res_operacionais", session_id=session.id)
     return render_template("dashboard.html", bokeh_script=bokeh_script)
 
-
+def test():
+    print("remove this function")
 if __name__ == '__main__':
     app.run(debug=True)
