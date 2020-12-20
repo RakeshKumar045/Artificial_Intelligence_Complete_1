@@ -1,1 +1,1 @@
-print("kkkkkk    ")
+print("kkkkkk  ")
